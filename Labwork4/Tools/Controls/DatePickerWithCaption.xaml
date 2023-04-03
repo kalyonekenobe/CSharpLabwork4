@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="KMA.ProgrammingInCSharp.Labwork4.Tools.Controls.DatePickerWithCaption"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KMA.ProgrammingInCSharp.Labwork4.Tools.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" x:Name="datePickerWithCaption">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="TbCaption" Grid.Row="0" Grid.Column="0" FontSize="14" VerticalAlignment="Bottom" Margin="2 0" Text="Caption"></TextBlock>
+        <DatePicker x:Name="DpDate" Grid.Row="1" Grid.Column="0" FontSize="18" BorderThickness="0.5" VerticalAlignment="Top" Margin="2" VerticalContentAlignment="Center" SelectedDate="{Binding ElementName=datePickerWithCaption, Path=Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DatePicker>
+    </Grid>
+</UserControl>
